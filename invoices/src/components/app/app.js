@@ -19,8 +19,8 @@ export default class App extends Component{
     };
     createTodoItem(label){
          return{
-             label,commit
-             important:false,
+             label,
+             important: false,
              id:this.maxId++,
              done:false
          }
@@ -88,9 +88,9 @@ export default class App extends Component{
             case 'all':
                 return items;
             case 'active':
-                return items.filter((item)=>!items.done);
+                return items.filter((item)=>!item.done);
             case 'done':
-                return items.filter((item)=>items.done);
+                return items.filter((item)=>item.done);
             default:
                return items;
 
